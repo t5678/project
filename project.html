@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/JavaScript">
+        score = 0;
+        function setScore(scoreIn) {
+            score += scoreIn;
+        }
+        function getScore() {
+            return score;
+        }
+        function getResult() {
+            if (score <=7) {
+                alert("Congratulations, that is the worst rating I've given so far.");
+            }
+            else if (score > 7 || score <= 15) {
+                alert("How are you so bad at this?");
+            }
+            else if (score > 15 || score <= 23) {
+                alert("Ehhhh.");
+            }
+            else if (score > 23 || score <= 30) {
+                alert("I would clap for you but I don't care.");
+            }
+            else {
+                alert("Well done.");
+            }
+        }
+        </script>
+        <style>
+            h1 {
+                font-family: Comic Sans MS;
+                font-size: 200%;
+            }
+            h2 {
+                font-family: Comic Sans MS;
+                font-size: 200%;
+            }
+          h3 {
+                font-family: Comic Sans MS;
+          }
+          label {
+                font-family: Comic Sans MS;
+                text-align:center;
+            }
+        </style>
+        <title>NICE-CREAM</title>
+    </head>
+    <body style="background-color:rgb(161, 190, 223);">
+        <h1 style="text-align:center;"><strong>NICE-CREAM</strong></h1>
+        <br> 
+        <h2 style="text-align:center;">Think you know how to build the perfect ice-cream?
+        Build it below and we will be the judge! </h2>
+        <h3>Select size:</h3>
+        <div>
+            <form id="answer">
+            <input type="radio" id="Small" name="Size" value="Small" onclick="setScore(4)">
+            <label for ="Small">Small</label>
+            <br/>
+            <input type="radio" id ="Medium" name="Size" value="Medium" onclick="setScore(8)">
+            <label for ="Medium">Medium</label>
+            <br/>
+            <input type="radio" id ="Large" name="Size" value="Large" onclick="setScore(6)">
+            <label for ="Large">Large</label>
+            <br/>
+            </form>
+            
+        </div>
+        <h3>Select base:</h3>
+        <div>
+            <form>
+            <input type="radio" id ="Cup" name="Base" value="Cup" onclick="setScore(0)">
+            <label for ="Cup">Cup</label>
+            <br/>
+            <input type="radio" id ="Cone" name="Base" value="Cone" onclick="setScore(10)">
+            <label for ="Cone">Cone</label>
+            <br/>
+            </form>
+        </div>
+        <h3>Select flavor:</h3>
+        <div>
+            <form>
+            <input type="radio" id = "Chocolate" name="Flavor" value="Chocolate" onclick="setScore(5)">
+            <label for ="Chocolate">Chocolate</label>
+            <br/>
+            <input type="radio" id = "Vanilla" name="Flavor" value="Vanilla" onclick="setScore(4)">
+            <label for ="Vanilla">Medium</label>
+            <br/>
+            <input type="radio" id = "Cookie Dough" name="Flavor" value="Cookie Dough" onclick="setScore(10)">
+            <label for ="Cookie Dough">Cookie Dough</label>
+            <br/>
+            <input type="radio" id = "Strawberry" name="Flavor" value="Strawberry" onclick="setScore(6)">
+            <label for ="Strawberry">Strawberry</label>
+            <br/>
+            <input type="radio" id = "Mint Chocolate Chip" name="Flavor" value="Mint Chocolate Chip" onclick="setScore(0)">
+            <label for ="Mint Chocolate Chip">Mint Chocolate Chip</label>
+            <br/>
+            <input type="radio" id = "Peanut Butter" name="Flavor" value="Peanut Butter" onclick="setScore(1)">
+            <label for ="Peanut Butter">Peanut Butter</label>
+            <br/>
+            </form>
+        </div>
+        <h3>Select toppings:</h3>
+        <div>
+            <form>
+            <input type="checkbox" id = "Sprinkles" onclick="setScore(0)">
+            <label for ="Sprinkles">Sprinkles</label>
+            <br/>
+            <input type="checkbox" id = "Chocolate Fudge" onclick="setScore(8)">
+            <label for ="Chocolate Fudge">Chocolate Fudge</label>
+            <br/>
+            <input type="checkbox" id = "Cherries" onclick="setScore(3)">
+            <label for ="Cherries">Cherries</label>
+            <br/>
+            <input type="checkbox" id = "Whipped Cream" onclick="setScore(8)">
+            <label for ="Whipped Cream">Whipped Cream</label>
+            <br/>
+            <input type="checkbox" id = "Chocolate Chips" onclick="setScore(7)">
+            <label for ="Chocolate Chips">Chocolate Chips</label>
+            <br/>
+            <input type="checkbox" id = "Peanut Butter Syrup" onclick="setScore(2)">
+            <label for ="Peanut Butter Syrup">Peanut Butter Syrup</label>
+            <br/>
+            </form>
+        </div>
+        <div>
+            <button onclick="getResult()">Submit</button>
+        </div>
+    </body>
+</html>
